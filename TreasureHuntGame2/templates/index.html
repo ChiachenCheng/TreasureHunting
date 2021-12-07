@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="20"> -->
+    <title>Game</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='example.css') }}">
+<body>
+	<div id="logging">
+	<div id="top">
+		你好，请先登录。
+	</div>
+	<div class="input">
+		<input type="text" name="user" id="signup_user" placeholder="请输入用户名">
+        <input type="password" name="pass" id="signup_passwd" placeholder="请输入密码">
+        <input type="password" name="passagain" id="signup_passwd_again" placeholder="请再次输入密码">
+		<button id="signup" onclick="signup();">
+			注册
+		</button>
+	</div>
+	<br>
+	<div class="input">
+		<input type="text" name="user" id="login_user" placeholder="请输入用户名">
+        <input type="password" name="pass" id="login_passwd" placeholder="请输入密码">
+		<button id="login" onclick="login();">
+			登录
+		</button>
+	</div>
+	<!-- <input type="submit" name="logging" value="log in", onchange="login();"> -->
+	<script type="text/javascript" src="{{ url_for('static', filename='example.js') }}"></script>
+	</div>
+</body>
+</head>
+</html>

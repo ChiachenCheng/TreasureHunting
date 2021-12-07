@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ username }}</title>
+</head>
+    <body>
+        <div>
+            <h1>玩家{{ username }}</h1>
+        </div>
+        <div>
+            <form method="get" action="http://127.0.0.1:5000/{{ username }}/info" enctype="multipart/form-data">
+            <input type="submit" value="基本信息" class="button-new" style="margin-top:15px;"/>
+            </form>
+            <br>
+        </div>
+        <div>
+            <form method="get" action="http://127.0.0.1:5000/{{ username }}/work" enctype="multipart/form-data">
+            <input type="submit" value="工作" class="button-new" style="margin-top:15px;"/>
+            </form>
+            <br>
+        </div>
+        <div>
+            <form method="get" action="http://127.0.0.1:5000/{{ username }}/seek" enctype="multipart/form-data">
+            <input type="submit" value="寻宝" class="button-new" style="margin-top:15px;"/>
+            </form>
+            <br>
+        </div>
+        <div>
+            <form method="get" action="http://127.0.0.1:5000/market" enctype="multipart/form-data">
+            <input type="submit" value="浏览市场" class="button-new" style="margin-top:15px;"/>
+            </form>
+            <br>
+        </div>
+        <div>
+            <form method="get" action="http://127.0.0.1:5000/{{ username }}/market" enctype="multipart/form-data">
+            <input type="submit" value="可購買寶物列表" class="button-new" style="margin-top:15px;"/>
+            </form>
+            <br>
+        </div>
+        <div>
+            <form method="get" action="http://127.0.0.1:5000/{{ username }}/treasures" enctype="multipart/form-data">
+            <input type="submit" value="查看寶物" class="button-new" style="margin-top:15px;"/>
+            </form>
+            <br>
+        </div>
+        <div>
+            <form method="get" action="http://127.0.0.1:5000/{{ username }}/logout" enctype="multipart/form-data">
+            <input type="submit" value="登出" class="button-new" style="margin-top:15px;"/>
+            </form>
+            <br>
+        </div>
+        <div>
+            <form method="post" action="http://127.0.0.1:5000/{{ username }}/history" enctype="multipart/form-data">
+                <label>
+                    <input type="number" class="txt_input" placeholder="operations" name="number" style="margin-top:15px;"/>
+                </label>
+            <input type="submit" value="查看歷史操作" class="button-new" style="margin-top:15px;"/>
+            </form>
+            <br>
+        </div>
+        <div>
+            <form method="post" action="http://127.0.0.1:5000/{{ username }}/wear" enctype="multipart/form-data">
+                <label>
+                    <input type="text" class="txt_input" placeholder="treasure" name="treasurename" style="margin-top:15px;"/>
+                </label>
+            <input type="submit" value="穿上" class="button-new" style="margin-top:15px;"/>
+            </form>
+            <br>
+        </div>
+        <div>
+            <form method="post" action="http://127.0.0.1:5000/{{ username }}/unwear" enctype="multipart/form-data">
+                <label>
+                    <input type="text" class="txt_input" placeholder="treasure" name="treasurename" style="margin-top:15px;"/>
+                </label>
+            <input type="submit" value="脫下" class="button-new" style="margin-top:15px;"/>
+            </form>
+            <br>
+        </div>
+        <div>
+            <form method="post" action="http://127.0.0.1:5000/{{ username }}/drop" enctype="multipart/form-data">
+                <label>
+                    <input type="text" class="txt_input" placeholder="treasure" name="treasurename" style="margin-top:15px;"/>
+                </label>
+            <input type="submit" value="丟棄" class="button-new" style="margin-top:15px;"/>
+            </form>
+            <br>
+        </div>
+        <div>
+            <form method="post" action="http://127.0.0.1:5000/{{ username }}/rename" enctype="multipart/form-data">
+                <label>
+                    <input type="text" class="txt_input" placeholder="treasure" name="treasurename" style="margin-top:15px;"/>
+                    <input type="text" class="txt_input" placeholder="treasure" name="newtreasurename" style="margin-top:15px;"/>
+                </label>
+            <input type="submit" value="重命名為" class="button-new" style="margin-top:15px;"/>
+            </form>
+            <br>
+        </div>
+        <div>
+            <form method="post" action="http://127.0.0.1:5000/{{ username }}/sell" enctype="multipart/form-data">
+                <label>
+                    <input type="text" class="txt_input" placeholder="treasure" name="treasurename" style="margin-top:15px;"/>
+                    <input type="number" class="txt_input" placeholder="price" name="price" style="margin-top:15px;"/>
+                </label>
+            <input type="submit" value="售賣" class="button-new" style="margin-top:15px;"/>
+            </form>
+            <br>
+        </div>
+        <div>
+            <form method="post" action="http://127.0.0.1:5000/{{ username }}/callback" enctype="multipart/form-data">
+                <label>
+                    <input type="text" class="txt_input" placeholder="treasure" name="treasurename" style="margin-top:15px;"/>
+                </label>
+            <input type="submit" value="召回" class="button-new" style="margin-top:15px;"/>
+            </form>
+            <br>
+        </div>
+        <div>
+            <form method="post" action="http://127.0.0.1:5000/{{ username }}/buy" enctype="multipart/form-data">
+                <label>
+                    <input type="text" class="txt_input" placeholder="treasure" name="treasurename" style="margin-top:15px;"/>
+                    <input type="text" class="txt_input" placeholder="seller" name="sellername" style="margin-top:15px;"/>
+                </label>
+            <input type="submit" value="購買" class="button-new" style="margin-top:15px;"/>
+            </form>
+            <br>
+        </div>
+        <div>
+            <form method="post" action="http://127.0.0.1:5000/{{ username }}/changepw" enctype="multipart/form-data">
+                <label>
+                    <input type="password" class="txt_input" placeholder="oldpassword" name="oldpw" style="margin-top:15px;"/>
+                    <input type="password" class="txt_input" placeholder="newpassword" name="newpw" style="margin-top:15px;"/>
+                    <input type="password" class="txt_input" placeholder="newpasswordagain" name="newpwagain" style="margin-top:15px;"/>
+                </label>
+            <input type="submit" value="修改密碼" class="button-new" style="margin-top:15px;"/>
+            </form>
+            <br>
+        </div>
+    </body>
+</html>
